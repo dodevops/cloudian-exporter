@@ -39,14 +39,31 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /metrics
               port: http
           readinessProbe:
             httpGet:
-              path: /
+              path: /metrics
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: CLOUDIAN_URL
+              value: {{.Values.configuration.cloudian.url | quote}}
+            - name: CLOUDIAN_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: {{.Values.configuration.cloudian.authSecret.usernameKey | quote}}
+                  name: {{.Values.configuration.cloudian.authSecret.name | quote}}
+            - name: CLOUDIAN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: {{.Values.configuration.cloudian.authSecret.passwordKey | quote}}
+                  name: {{.Values.configuration.cloudian.authSecret.name | quote}}
+            - name: EXPORTER_REFRESH
+              value: {{.Values.configuration.exporter.refresh | quote}}
+            - name: EXPORTER_LOGLEVEL
+              value: {{.Values.configuration.exporter.loglevel | quote}}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

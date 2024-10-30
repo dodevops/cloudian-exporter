@@ -83,10 +83,19 @@ affinity: {}
 
 configuration:
   cloudian:
+    # -- url to the cloudian cmc REST api
     url: ""
-    authSecret: ""
+    authSecret:
+      # -- name that holds the cmc credentials
+      name: ""
+      # -- secret key that holds the username
+      usernameKey: "username"
+      # -- secret key that holds the password
+      passwordKey: "password"
   exporter:
+    # -- exporter log level
     loglevel: ""
+    # -- refresh interval for cloudian metrics
     refresh: 5
 
 serviceMonitor:

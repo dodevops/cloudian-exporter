@@ -2,5 +2,12 @@ apiVersion: v2
 name: cloudian-exporter
 description: A Helm chart for cloudian-exporter
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "latest"
+keywords:
+  - cloudian
+  - s3
+  - prometheus
+home: https://github.com/dodevops/cloudian-exporter
+sources:
+  - https://github.com/dodevops/cloudian-exporter
