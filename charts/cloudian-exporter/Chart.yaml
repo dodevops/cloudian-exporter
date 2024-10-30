@@ -2,8 +2,8 @@ apiVersion: v2
 name: cloudian-exporter
 description: A Helm chart for cloudian-exporter
 type: application
-version: 0.1.1
-appVersion: "latest"
+version: 0.1.0
+appVersion: "0.1.0"
 keywords:
   - cloudian
   - s3
