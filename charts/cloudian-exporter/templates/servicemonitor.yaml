@@ -8,6 +8,7 @@ metadata:
 spec:
   endpoints:
     - port: http
+      path: /metrics
   selector:
     matchLabels:
       {{- include "cloudian-exporter.labels" . | nindent 14 }}
