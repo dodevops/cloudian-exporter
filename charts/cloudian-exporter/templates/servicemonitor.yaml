@@ -11,4 +11,4 @@ spec:
   selector:
     matchLabels:
       {{- include "cloudian-exporter.labels" . | nindent 14 }}
-{{-end-}}
+{{- end -}}
