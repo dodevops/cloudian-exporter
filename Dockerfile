@@ -9,6 +9,6 @@ FROM alpine
 COPY --from=builder /app/cloudian-exporter /
 RUN adduser -D cloudian-exporter && chmod +x /cloudian-exporter
 
-USER cloudian-exporter
+USER 1001
 EXPOSE 8080
 ENTRYPOINT ["/cloudian-exporter"]
