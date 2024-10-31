@@ -21,3 +21,10 @@ Aside from building the go binary and running it, a container is available as we
 
    docker run --rm -it -P -e CLOUDIAN_URL=... -e CLOUDIAN_USERNAME=... -e CLOUDIAN_PASSWORD=... ghcr.io/dodevops/cloudian-exporter:main
 
+## Exported metrics
+
+* cloudian_bucket_size: Size of a bucket in Cloudian in bytes
+  * Labels available
+    * group_id: Group in Cloudian
+    * user_id: User holding the bucket
+    * bucket: Bucket name
