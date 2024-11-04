@@ -3,6 +3,23 @@ entries:
   cloudian-exporter:
   - apiVersion: v2
     appVersion: 0.1.1
+    created: "2024-11-04T07:43:33.648612282Z"
+    description: A Helm chart for cloudian-exporter
+    digest: 4ddd1c7a8efbf52b646f619b86188ec3dbb5bceab9abef7fac06b728ac262ded
+    home: https://github.com/dodevops/cloudian-exporter
+    keywords:
+    - cloudian
+    - s3
+    - prometheus
+    name: cloudian-exporter
+    sources:
+    - https://github.com/dodevops/cloudian-exporter
+    type: application
+    urls:
+    - https://github.com/dodevops/cloudian-exporter/releases/download/cloudian-exporter-0.1.4/cloudian-exporter-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.1.1
     created: "2024-10-31T07:42:29.338968601Z"
     description: A Helm chart for cloudian-exporter
     digest: ba85a508b7e095f15b2ce55890b3e1852cf8433f2238b05423444fad32bcb8c0
@@ -69,4 +86,4 @@ entries:
     urls:
     - https://github.com/dodevops/cloudian-exporter/releases/download/cloudian-exporter-0.1.0/cloudian-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-31T07:42:29.338986945Z"
+generated: "2024-11-04T07:43:33.648638521Z"
